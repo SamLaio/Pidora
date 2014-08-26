@@ -3,11 +3,11 @@
 yum install gcc pam-devel openssl-devel libXfont pixman libX11-devel libXfixes-devel autoconf automake libtool -y
 yum install tigervnc-server -y
 yum install gcc pam-devel openssl-devel xrdp -y
-iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 3389 -j ACCEPT
-ip6tables -A INPUT -m state --state NEW -m tcp -p tcp --dport 3389 -j ACCEPT
-echo "--port=3389:tcp" >> /etc/sysconfig/system-config-firewall
-service iptables reload
-service ip6tables reload
+#iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 3389 -j ACCEPT
+#ip6tables -A INPUT -m state --state NEW -m tcp -p tcp --dport 3389 -j ACCEPT
+#echo "--port=3389:tcp" >> /etc/sysconfig/system-config-firewall
+#service iptables reload
+#service ip6tables reload
 
 
 #install web server
