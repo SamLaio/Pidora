@@ -11,9 +11,15 @@ yum install gcc pam-devel openssl-devel xrdp -y
 
 
 #install web server
-yum install httpd mysql-server php php-devel php-mysql sqlite sqlite-devel -y
+yum install httpd mysql mysql-server php php-devel php-mysql sqlite sqlite-devel -y
+yum install  mod_ssl  mod_perl  mod_auth_mysql -y
+#yum install  httpd  php  php-mysql  mysql  mysql-server -y
 #yum install apache2 php5 libapache2-mod-php5 -y
 #yum install mysql-server mysql-client php5-mysql -y
+chkconfig mysqld on
+service mysqld start
+chkconfig httpd on
+service httpd start
 
 #ntfs
 sudo apt-get install ntfs-3g -y
