@@ -8,6 +8,8 @@ yum install gcc pam-devel openssl-devel xrdp -y
 #echo "--port=3389:tcp" >> /etc/sysconfig/system-config-firewall
 #service iptables reload
 #service ip6tables reload
+chkconfig tigervnc-server on
+service tigervnc-server start
 
 
 #install web server
