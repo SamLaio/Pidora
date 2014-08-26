@@ -1,5 +1,7 @@
 #! /bin/bash
 #install xrdp
+yum install gcc pam-devel openssl-devel libXfont pixman libX11-devel libXfixes-devel autoconf automake libtool -y
+yum install tigervnc-server -y
 yum install gcc pam-devel openssl-devel xrdp -y
 
 #install web server
