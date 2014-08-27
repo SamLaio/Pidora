@@ -24,11 +24,11 @@ chkconfig httpd on
 service httpd start
 
 #ntfs
-sudo apt-get install ntfs-3g -y
+yum install ntfs-3g -y
 
 #zh_tw
-yum install system-config-language -y
+#yum install system-config-language -y
 yum install cjkuni-ukai-fonts cjkuni-uming-fonts taipeifonts wqy-bitmap-fonts wqy-microhei-fonts -y
-yum install scim scim-tables scim-tables-chinese scim-tables-chinese-extra scim-array scim-chewing -y
+yum install gcin -y
 echo  "/etc/sysconfig/i18n"
 echo "LANG=\"en_US.UTF-8\"->LANG=\"zh_TW.UTF-8\""
