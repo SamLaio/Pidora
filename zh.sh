@@ -3,6 +3,13 @@
 yum install gcc pam-devel openssl-devel libXfont pixman libX11-devel libXfixes-devel autoconf automake libtool -y
 yum install tigervnc-server -y
 yum install gcc pam-devel openssl-devel xrdp -y
+wget http://sourceforge.net/projects/xrdp/files/xrdp/0.6.1/xrdp-v0.6.1.tar.gz/download
+tar zxvf xrdp-v0.6.1.tar.gz
+cd xrdp-v0.6.1
+./bootstrap
+./configure
+make
+make install
 #iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 3389 -j ACCEPT
 #ip6tables -A INPUT -m state --state NEW -m tcp -p tcp --dport 3389 -j ACCEPT
 #echo "--port=3389:tcp" >> /etc/sysconfig/system-config-firewall
@@ -10,6 +17,8 @@ yum install gcc pam-devel openssl-devel xrdp -y
 #service ip6tables reload
 chkconfig tigervnc-server on
 service tigervnc-server start
+
+cd ..
 
 
 #install web server
