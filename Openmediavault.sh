@@ -2,6 +2,7 @@ echo "deb http://packages.openmediavault.org/public kralizec main" > /etc/apt/so
 cd /tmp
 wget -O - http://packages.openmediavault.org/public/archive.key | apt-key add -
 apt-get update
-apt-get install openmediavault
+openmediavault-keyring postfix -y
+apt-get install openmediavault -y
 omv-initsystem
 shutdown -r now
